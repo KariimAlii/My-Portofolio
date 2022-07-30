@@ -1,0 +1,610 @@
+
+<!-- saved from url=(0051)https://www.kunkalabs.com/mixitup/docs/get-started/ -->
+<html lang="en-US" class="__no-bounce __js wf-ffdagnywebpro-n7-active wf-ffdagnywebpro-n4-active wf-ffdagnywebpro-n9-active wf-ubuntumono-n4-active wf-droidserif-n4-active wf-droidserif-n7-active wf-droidserif-i4-active wf-ffdagnywebpro-i4-active wf-ocrastd-n4-active wf-ubuntumono-n7-active wf-ubuntumono-i4-active wf-active __chrome __windows __has-mouse" data-module-key="layout[0]" data-environment="production"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="KunkaLabs">
+
+<meta name="description" content="A high-performance, dependency-free library for animated filtering, sorting and more">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.kunkalabs.com/mixitup/">
+<meta property="og:description" content="A high-performance, dependency-free library for animated filtering, sorting and more">
+<meta property="og:image" content="https://www.kunkalabs.com/public/icons/open-graph-large.png">
+<meta property="og:title" content="MixItUp | KunkaLabs">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@patrickkunka">
+<meta name="twitter:title" content="MixItUp | KunkaLabs">
+<meta name="twitter:description" content="A high-performance, dependency-free library for animated filtering, sorting and more">
+<meta name="twitter:image" content="https://www.kunkalabs.com/public/icons/open-graph.png">
+
+    <link rel="canonical" href="https://www.kunkalabs.com/mixitup/">
+
+        <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEUAAABCiZtUyORUyORCiZtUyORCiZtUyORCiZtUyORUyORCiZtUyORCiZtUyOREkKNUyORUyORUyORCiZtUyORUyORCiZtUyORCiZtUyORCiZtDjaBFlalHma1KpbtLqcBOtM1QuNJSwNtTxN9UyOQlYZhqAAAAGnRSTlMAEBAgMDBAQFBQYHBwgICPj5+vv7/P39/v793jxf8AAACqSURBVHja1ZJdF4IgDIYnZaaVpWbKrCzl///GIokYH3btc/fuPBwGGywCQeH5HyEVyaxwAsHZjFDLfA4LfPXJeVBIVU4CQvHNDfMKNdO59Ak8NvLeI2Qkx45Q0NwwSxiO1oHSEq64ta8kwh2xjeymDeGBbyrn2bowdCg5+D4OpgYmNlQQmRJ6VLSRMzxZeKKmcscPYuzwx85ZIBA3NFnbKwg9Ei4jFTgsgRepVztePP0rPgAAAABJRU5ErkJggg==">
+<link rel="manifest" href="https://www.kunkalabs.com/public/manifest.webmanifest">
+        <link href="./Get Started – MixItUp Docs _ KunkaLabs_files/styles.css" rel="stylesheet" type="text/css">
+
+
+            <script async="" src="./Get Started – MixItUp Docs _ KunkaLabs_files/analytics.js.download"></script><script>
+                if (location.protocol === 'http:') location.href = location.href.replace(/^http:/, 'https:');
+            </script>
+
+            <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-47697299-4', 'auto');
+</script>
+        <script src="./Get Started – MixItUp Docs _ KunkaLabs_files/qmc5zbw.js.download"></script>
+
+        <style type="text/css">.tk-droid-serif{font-family:"droid-serif",serif;}.tkff-dagny-web-pro{font-family:"ff-dagny-web-pro",sans-serif;}.tk-ocr-a-std{font-family:"ocr-a-std",sans-serif;}.tk-ubuntu-mono{font-family:"ubuntu-mono",sans-serif;}</style><style type="text/css">@font-face{font-family:droid-serif;src:url(https://use.typekit.net/af/827668/00000000000000000001241a/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/827668/00000000000000000001241a/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/827668/00000000000000000001241a/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:droid-serif;src:url(https://use.typekit.net/af/2cf6a7/00000000000000000001241c/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/2cf6a7/00000000000000000001241c/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/2cf6a7/00000000000000000001241c/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:droid-serif;src:url(https://use.typekit.net/af/da6da7/00000000000000000001241b/27/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/da6da7/00000000000000000001241b/27/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/da6da7/00000000000000000001241b/27/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:ff-dagny-web-pro;src:url(https://use.typekit.net/af/e2496e/0000000000000000000173c7/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/e2496e/0000000000000000000173c7/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/e2496e/0000000000000000000173c7/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:ff-dagny-web-pro;src:url(https://use.typekit.net/af/171dea/000000000000000000015d84/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/171dea/000000000000000000015d84/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/171dea/000000000000000000015d84/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:ff-dagny-web-pro;src:url(https://use.typekit.net/af/2da40a/000000000000000000015d8d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/2da40a/000000000000000000015d8d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/2da40a/000000000000000000015d8d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:ff-dagny-web-pro;src:url(https://use.typekit.net/af/ee5d1e/000000000000000000015d82/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3) format("woff2"),url(https://use.typekit.net/af/ee5d1e/000000000000000000015d82/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3) format("woff"),url(https://use.typekit.net/af/ee5d1e/000000000000000000015d82/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3) format("opentype");font-weight:900;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:ocr-a-std;src:url(https://use.typekit.net/af/3315df/000000000000000000012e5c/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/3315df/000000000000000000012e5c/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/3315df/000000000000000000012e5c/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:ubuntu-mono;src:url(https://use.typekit.net/af/4964f8/0000000000000000000123f2/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/4964f8/0000000000000000000123f2/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/4964f8/0000000000000000000123f2/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:ubuntu-mono;src:url(https://use.typekit.net/af/d1db18/0000000000000000000123f4/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/d1db18/0000000000000000000123f4/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/d1db18/0000000000000000000123f4/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:ubuntu-mono;src:url(https://use.typekit.net/af/7fcc92/0000000000000000000123f1/27/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/7fcc92/0000000000000000000123f1/27/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/7fcc92/0000000000000000000123f1/27/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}</style><script>
+!function(e){"use strict";var t=function(){this.hasMouse=!1,this.hasTouch=!1,Object.seal(this)},s=function(){this.html=e.document.documentElement,this.body=this.html.querySelector("body"),Object.seal(this)},a=new t,o=new s,h=function(){o.html.addEventListener("mousemove",c),o.html.addEventListener("mousewheel",c),o.html.addEventListener("touchstart",c)},n=function(){o.html.removeEventListener("mousemove",c),o.html.removeEventListener("mousewheel",c),o.html.removeEventListener("touchstart",c)},c=function(e){"touchstart"===e.type||a.hasMouse?"touchstart"!==e.type||a.hasTouch||(o.html.classList.add("__has-touch"),o.html.classList.remove("__has-mouse"),a.hasMouse=!1,a.hasTouch=!0,n()):(o.html.classList.remove("__has-touch"),o.html.classList.add("__has-mouse"),a.hasMouse=!0,a.hasTouch=!1,n())},m=function(e){var t=e.parentElement,s=null,a=function(e){"boolean"==typeof e&&e&&t.classList.add("image__cached"),t.classList.add("image__loaded")};s=document.createElement("div"),s.className="image_bg",s.style.backgroundImage="url("+e.src+")",t&&(t.insertBefore(s,e),requestAnimationFrame(a))};o.html.classList.remove("__no-js"),o.html.classList.add("__js"),h();try{Typekit.load({async:!1})}catch(i){}e.features=a,e.loadImg=m}(window);
+</script>
+        <title>Get Started – MixItUp Docs | KunkaLabs</title>
+    </head>
+
+    <body data-behavior="link-handler891CCF ripple76EB44" class="state__app-ready">
+        <div class="global-content">
+    <header class="global-header" data-module-key="layout[0].data.modules[0].data.modules[0]" data-behavior="subscribe87631A nav04C8DD" data-events="[&quot;navigate&quot;, &quot;auth&quot;]">
+    <div class="global-header_brand-menu global-header_brand-menu__alt wrapper" data-ref="brand-menu">
+        <span class="hamburger" data-ref="hamburger"><i class="hamburger_tap-target" data-ref="ripple"></i></span>
+
+        <a href="https://www.kunkalabs.com/" class="logo">
+            <svg class="logo_kunkalabs-glyph" viewBox="0 0 53.217 35.928">
+    <polygon class="logo_kunkalabs-glyph__light" points="26.665,0 26.665,35.928 53.217,35.928"></polygon>
+    <polygon class="logo_kunkalabs-glyph__dark" points="0,0 0,35.928 26.551,35.928"></polygon>
+    <polygon class="logo_kunkalabs-glyph__light" points="0,35.928 0,0 26.551,0"></polygon>
+    <polygon class="logo_kunkalabs-glyph__shadow" points="13.282,17.964 0,35.928 0,35.928 16.874,22.783"></polygon>
+</svg>
+            <svg class="logo_kunkalabs-text" viewBox="0 0 85 34">
+    <path fill="#FFFFFF" d="M8.704,13.868L5.242,8.753l-1.397,1.554v3.56H0.029V0.098h3.816v5.586l4.74-5.586h4.504L7.897,5.999
+        l5.39,7.868H8.704z"></path>
+    <path fill="#FFFFFF" d="M29.691,7.691c0,4.445-2.537,6.393-6.452,6.393s-6.373-1.967-6.373-6.295V0.098h3.875V7.73
+        c0,1.967,1.003,2.911,2.538,2.911c1.534,0,2.537-0.885,2.537-2.813v-7.73h3.875V7.691z"></path>
+    <path fill="#FFFFFF" d="M44.129,0.098h3.777v13.769h-3.344L38.68,6.314v7.553h-3.777V0.098h3.561l5.665,7.278V0.098z"></path>
+    <path fill="#FFFFFF" d="M61.969,13.868l-3.462-5.114l-1.397,1.554v3.56h-3.816V0.098h3.816v5.586l4.74-5.586h4.505l-5.193,5.901
+        l5.389,7.868H61.969z"></path>
+    <path fill="#FFFFFF" d="M85.002,13.868h-4.091l-1.003-2.459h-5.311l-0.983,2.459H69.6L75.462,0h3.678L85.002,13.868z M77.272,4.524
+        l-1.554,3.914h3.089L77.272,4.524z"></path>
+    <path fill="#FFFFFF" d="M0,19.788h3.816v10.425h6.668v3.344H0V19.788z"></path>
+    <path fill="#FFFFFF" d="M30.466,33.557h-4.091l-1.003-2.459H20.06l-0.983,2.459h-4.013l5.862-13.868h3.678L30.466,33.557z
+            M22.735,24.213l-1.554,3.914h3.088L22.735,24.213z"></path>
+    <path fill="#FFFFFF" d="M46.706,23.328c0,1.554-0.944,2.498-2.144,3.029c1.613,0.571,2.754,1.456,2.754,3.423
+        c0,2.38-2.026,3.777-5.272,3.777h-7.101V19.788h7.061C44.876,19.788,46.706,21.066,46.706,23.328z M42.929,24.056
+        c0-0.787-0.61-1.2-1.751-1.2H38.66v2.42h2.42C42.24,25.276,42.929,24.902,42.929,24.056z M43.48,29.21
+        c0-0.807-0.59-1.259-1.869-1.259h-2.95v2.537h2.99C42.831,30.488,43.48,30.075,43.48,29.21z"></path>
+    <path fill="#FFFFFF" d="M58.964,24.921c3.206,0.649,5.094,1.652,5.094,4.308c0,2.872-2.223,4.524-5.508,4.524
+        c-2.498,0-4.819-0.767-6.531-2.262l2.124-2.518c1.436,1.121,2.852,1.632,4.485,1.632c1.023,0,1.574-0.354,1.574-0.944
+        c0-0.59-0.472-0.865-2.38-1.278c-2.99-0.629-5.153-1.455-5.153-4.367c0-2.577,2.026-4.426,5.35-4.426
+        c2.321,0,4.17,0.629,5.665,1.83l-1.908,2.675c-1.259-0.905-2.636-1.358-3.855-1.358c-0.925,0-1.397,0.374-1.397,0.866
+        C56.524,24.272,57.016,24.508,58.964,24.921z"></path>
+</svg>
+        </a>
+    </div>
+
+    <nav class="global-header_nav-menu global-header_nav-menu__inactive wrapper">
+            <a href="https://www.kunkalabs.com/" class="nav-link" data-ref="nav-link">Home</a>
+
+
+
+            <a href="https://www.kunkalabs.com/about-us/" class="nav-link" data-ref="nav-link">About Us</a>
+
+
+
+            <a href="https://www.kunkalabs.com/our-services/" class="nav-link" data-ref="nav-link">Our Services</a>
+
+
+
+            <a href="https://www.kunkalabs.com/tutorials/" class="nav-link" data-ref="nav-link">Tutorials</a>
+
+
+
+            <a href="https://www.kunkalabs.com/blog/" class="nav-link" data-ref="nav-link">Blog</a>
+
+
+
+        <h4 class="small-uppercase-heading">Products</h4>
+
+            <a href="https://www.kunkalabs.com/mixitup/" class="nav-link nav-link__active nav-link__parent" data-ref="nav-link">MixItUp 3</a>
+
+
+
+            <a href="https://www.kunkalabs.com/mixitup-pagination/" class="nav-link" data-ref="nav-link">MixItUp Pagination</a>
+
+
+
+            <a href="https://www.kunkalabs.com/mixitup-multifilter/" class="nav-link" data-ref="nav-link">MixItUp MultiFilter</a>
+
+
+
+        <nav class="global-header_nav-sub-menu global-header_nav-sub-menu__active wrapper">
+            <h2 class="medium-fat-heading">MixItUp</h2>
+
+                <a href="https://www.kunkalabs.com/mixitup/" class="nav-link nav-link__active nav-link__parent" data-ref="nav-link">Overview</a>
+
+
+
+                <a href="https://www.kunkalabs.com/tutorials/category/mixitup/" class="nav-link" data-ref="nav-link">Tutorials</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup/licenses/" class="nav-link" data-ref="nav-link">Licenses</a>
+
+
+
+            <h4 class="small-uppercase-heading">Docs</h4>
+
+                <a href="https://www.kunkalabs.com/mixitup/docs/get-started/" class="nav-link nav-link__active nav-link__current" data-ref="nav-link">Get Started</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup/docs/mixitup-factory/" class="nav-link" data-ref="nav-link">MixItUp Factory</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup/docs/configuration-object/" class="nav-link" data-ref="nav-link">Configuration Object</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup/docs/api-methods/" class="nav-link" data-ref="nav-link">API Methods</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup/docs/state-object/" class="nav-link" data-ref="nav-link">State Object</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup/docs/events/" class="nav-link" data-ref="nav-link">Events</a>
+
+
+
+            <h4 class="small-uppercase-heading">Extensions</h4>
+
+                <a href="https://www.kunkalabs.com/mixitup-pagination/" class="nav-link" data-ref="nav-link">MixItUp Pagination</a>
+
+
+                <a href="https://www.kunkalabs.com/mixitup-multifilter/" class="nav-link" data-ref="nav-link">MixItUp MultiFilter</a>
+
+
+        </nav>
+
+        <nav class="global-header_nav-sub-menu wrapper">
+            <h2 class="medium-fat-heading">MixItUp<br>Pagination</h2>
+
+                <a href="https://www.kunkalabs.com/mixitup-pagination/" class="nav-link" data-ref="nav-link">Overview</a>
+
+
+
+                <a href="https://www.kunkalabs.com/tutorials/category/mixitup-pagination/" class="nav-link" data-ref="nav-link">Tutorials</a>
+
+
+
+            <h4 class="small-uppercase-heading">Docs</h4>
+
+                <a href="https://www.kunkalabs.com/mixitup-pagination/docs/get-started/" class="nav-link" data-ref="nav-link">Get Started</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup-pagination/docs/configuration-object/" class="nav-link" data-ref="nav-link">Configuration Object</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup-pagination/docs/state-object/" class="nav-link" data-ref="nav-link">State Object</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup-pagination/docs/api-methods/" class="nav-link" data-ref="nav-link">API Methods</a>
+
+
+
+            <h4 class="small-uppercase-heading">Related</h4>
+
+                <a href="https://www.kunkalabs.com/mixitup/" class="nav-link nav-link__active nav-link__parent" data-ref="nav-link">MixItUp 3</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup-multifilter/" class="nav-link" data-ref="nav-link">MixItUp MultiFilter</a>
+
+
+        </nav>
+
+        <nav class="global-header_nav-sub-menu wrapper">
+            <h2 class="medium-fat-heading">MixItUp<br>MultiFilter</h2>
+
+                <a href="https://www.kunkalabs.com/mixitup-multifilter/" class="nav-link" data-ref="nav-link">Overview</a>
+
+
+
+                <a href="https://www.kunkalabs.com/tutorials/category/mixitup-multifilter/" class="nav-link" data-ref="nav-link">Tutorials</a>
+
+
+
+            <h4 class="small-uppercase-heading">Docs</h4>
+
+                <a href="https://www.kunkalabs.com/mixitup-multifilter/docs/get-started/" class="nav-link" data-ref="nav-link">Get Started</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup-multifilter/docs/configuration-object/" class="nav-link" data-ref="nav-link">Configuration Object</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup-multifilter/docs/api-methods/" class="nav-link" data-ref="nav-link">API Methods</a>
+
+
+
+            <h4 class="small-uppercase-heading">Related</h4>
+
+                <a href="https://www.kunkalabs.com/mixitup/" class="nav-link nav-link__active nav-link__parent" data-ref="nav-link">MixItUp 3</a>
+
+
+
+                <a href="https://www.kunkalabs.com/mixitup-pagination/" class="nav-link" data-ref="nav-link">MixItUp Pagination</a>
+
+
+        </nav>
+
+        <nav class="global-header_nav-sub-menu wrapper">
+            <h2 class="medium-fat-heading">Account</h2>
+
+                    <a href="https://www.kunkalabs.com/mixitup/docs/get-started/" class="nav-link nav-link__active nav-link__current" data-ref="nav-link">Sign In</a>
+
+
+        </nav>
+    </nav>
+
+    <div class="global-header_user-menu global-header_user-menu__alt wrapper">
+        <div class="global-header_user-menu-toolbar">
+
+            <div data-behavior="tooltip247E23" data-tooltip-content="Shopping bag" data-hide-on-click="true" data-is-fixed="true" data-action="openShoppingBag" data-ref="ripple shopping-bag" class="user-menu-item global-header_shopping-bag" data-total-items="0">
+                <i class="svg-icon svg-icon__bag">
+    <svg viewBox="0 0 100 100">
+        <path d="M6.906,85.912c0,3.968,3.214,7.182,7.182,7.182h71.823c3.968,0,7.182-3.214,7.182-7.182v-44.89
+        c0-3.968-3.214-7.182-7.182-7.182h-7.182v-8.08c0-10.414-8.439-18.854-18.854-18.854c-4.256,0-8.17,1.401-11.312,3.771
+        c-2.55-1.257-5.405-1.975-8.439-1.975c-10.414,0-18.854,8.439-18.854,18.854l0.018,6.285h-7.2c-3.968,0-7.182,3.214-7.182,7.182
+        V85.912z M69.751,33.84H50.018L50,25.76c0-5.459,4.417-9.876,9.876-9.876s9.876,4.417,9.876,9.876V33.84z M41.04,33.84H30.267
+        l-0.018-6.285c0-5.459,4.417-9.876,9.876-9.876c0.88,0,1.742,0.11,2.55,0.339c-1.059,2.354-1.652,4.976-1.652,7.741L41.04,33.84z
+        M41.022,45.511c0-2.478,2.011-4.489,4.489-4.489c2.478,0,4.489,2.011,4.489,4.489C50,47.989,47.989,50,45.511,50
+        C43.033,50,41.022,47.989,41.022,45.511z M69.751,45.511c0-2.478,2.011-4.489,4.489-4.489c2.478,0,4.489,2.011,4.489,4.489
+        c0,2.478-2.011,4.489-4.489,4.489C71.762,50,69.751,47.989,69.751,45.511z M23.066,46.409v34.116c0,1.975-1.616,3.591-3.591,3.591
+        s-3.591-1.616-3.591-3.591V46.409c0-1.975,1.616-3.591,3.591-3.591S23.066,44.434,23.066,46.409z"></path>
+    </svg>
+</i>            </div>
+        </div>
+
+            
+    <div class="nav-link" data-action="[&quot;openAuth&quot;, &quot;switchToSignIn&quot;]" data-ref="nav-link">Sign in</div>
+
+    </div>
+
+    <div class="global-header_mask" data-ref="mask"></div>
+</header>
+<main class="global-main" data-module-key="layout[0].data.modules[0].data.modules[1]" data-behavior="subscribe977F1D transition-page5A938D" data-publish="true" data-events="[&quot;navigate&quot;]">
+    <section class="banner banner__background-light" data-module-key="layout[0].data.modules[0].data.modules[1].data.modules[0]">
+
+    <div class="wrapper banner_text">
+        <h2 class="medium-fat-heading">MixItUp Docs</h2>
+
+        <h1 class="large-heading large-heading__super">Get Started</h1>
+    </div>
+</section>
+<section class="box box__background-yellow box__align-left  box__align-top" data-module-key="layout[0].data.modules[0].data.modules[1].data.modules[1]">
+        <div class="wrapper box_text">
+                <a href="http://demos.kunkalabs.com/mixitup/" class="box_content">
+                    <h4 class="small-uppercase-heading">Looking for some examples?</h4>
+
+                    <p>MixItUp 3 now comes bundled with a growing list of demos that you can edit and experiment with.</p>
+                </a>
+
+                <a href="http://demos.kunkalabs.com/mixitup/" class="box_link secondary-link"><span>MixItUp 3 Demos</span> <i class="svg-icon svg-icon__arrow-right">
+    <svg viewBox="0 0 100 100">
+        <polyline fill="none" stroke-width="6" stroke-miterlimit="10" points="31.328,87.344 68.672,50 31.328,12.656"></polyline>
+    </svg>
+</i></a>
+        </div>
+</section>
+<section class="content-container" data-module-key="layout[0].data.modules[0].data.modules[1].data.modules[2]">
+    <div class="content-container_main wrapper">
+
+        <div class="info-box">
+    <i class="svg-icon svg-icon__info">
+    <svg viewBox="0 0 100 100">
+        <path d="M60.925,5.085c6.019,0,9.028,4.105,9.028,8.794c0,5.857-5.228,11.278-12.028,11.278
+        c-5.704,0-9.028-3.369-8.871-8.934C49.055,11.531,53.007,5.085,60.925,5.085z M42.407,94.915c-4.752,0-8.233-2.928-4.909-15.823
+        l5.453-22.866c0.948-3.661,1.105-5.129,0-5.129c-1.428,0-7.591,2.529-11.238,5.021l-2.371-3.957
+        c11.557-9.818,24.847-15.572,30.546-15.572c4.747,0,5.533,5.713,3.166,14.503L56.807,75.13c-1.105,4.249-0.633,5.713,0.472,5.713
+        c1.428,0,6.095-1.765,10.685-5.426l2.695,3.661C59.425,90.513,47.155,94.915,42.407,94.915z"></path>
+    </svg>
+</i>
+
+    <p>This documentation is for MixItUp 3. Looking for the MixItUp 2 docs? They can be found on the <a href="https://github.com/patrickkunka/mixitup/tree/v2">GitHub v2 branch</a></p>
+</div>
+<p>Most commonly, MixItUp is applied to a "<strong>container</strong>" of "<strong>target</strong>" elements, which could be a portfolio of projects, a list of blog posts, a selection of products, or any kind of UI where filtering and/or sorting would be advantageous.</p>
+<p>To get started, follow these simple steps:</p>
+<h2 class="medium-fat-heading">Building the Container</h2>
+<p>By default, MixItUp will query the container for targets matching the selector <code>'.mix'</code>.</p>
+<figure class="figure">
+
+<pre data-behavior="syntax20C537" class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mix category-a"</span> <span class="hljs-attr">data-order</span>=<span class="hljs-string">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mix category-b"</span> <span class="hljs-attr">data-order</span>=<span class="hljs-string">"2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mix category-b category-c"</span> <span class="hljs-attr">data-order</span>=<span class="hljs-string">"3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mix category-a category-d"</span> <span class="hljs-attr">data-order</span>=<span class="hljs-string">"4"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+</figure>
+<p>Targets can be filtered using any valid selector e.g. <code>'.category-a'</code>, and are sorted via optional custom data attributes e.g. <code>'data-order'</code>.</p>
+<p>Further reading: <a href="https://www.kunkalabs.com/tutorials/marking-up-mixitup-containers/">Marking-up MixItUp Containers</a></p>
+<div class="info-box">
+    <i class="svg-icon svg-icon__info">
+    <svg viewBox="0 0 100 100">
+        <path d="M60.925,5.085c6.019,0,9.028,4.105,9.028,8.794c0,5.857-5.228,11.278-12.028,11.278
+        c-5.704,0-9.028-3.369-8.871-8.934C49.055,11.531,53.007,5.085,60.925,5.085z M42.407,94.915c-4.752,0-8.233-2.928-4.909-15.823
+        l5.453-22.866c0.948-3.661,1.105-5.129,0-5.129c-1.428,0-7.591,2.529-11.238,5.021l-2.371-3.957
+        c11.557-9.818,24.847-15.572,30.546-15.572c4.747,0,5.533,5.713,3.166,14.503L56.807,75.13c-1.105,4.249-0.633,5.713,0.472,5.713
+        c1.428,0,6.095-1.765,10.685-5.426l2.695,3.661C59.425,90.513,47.155,94.915,42.407,94.915z"></path>
+    </svg>
+</i>
+
+    <p>Client-side or "DOM-based" filtering and sorting should not be used as an alternative to server-side filtering when dealing with large or growing datasets containing hundreds or thousands of items. MixItUp works best for moderately sized or static datasets with up to 1000 items. Want to integrate MixItUp with server-side/ajax filtering? Check out the <a href="https://www.kunkalabs.com/tutorials/using-the-dataset-api/">Dataset API</a>.</p>
+</div>
+<h2 class="medium-fat-heading">Building Controls</h2>
+<p>One way that filtering and sorting happens is when "controls" are clicked. You may use any clickable element as a control, but <code>&lt;button type="button"&gt;</code> is recommended for accessibility.</p>
+<h4 class="small-heading">Filter Controls</h4>
+<p>Filter controls are queried based on the presence of a <code>data-filter</code> attribute, whose value must be <code>'all'</code>, <code>'none'</code>, or a valid selector string e.g. <code>'.category-a'.</code></p>
+<figure class="figure">
+
+<pre data-behavior="syntax995835" class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-filter</span>=<span class="hljs-string">"all"</span>&gt;</span>All<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-filter</span>=<span class="hljs-string">".category-a"</span>&gt;</span>Category A<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-filter</span>=<span class="hljs-string">".category-b"</span>&gt;</span>Category B<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-filter</span>=<span class="hljs-string">".category-c"</span>&gt;</span>Category C<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre>
+</figure>
+<p>Further reading: <a href="https://www.kunkalabs.com/tutorials/filtering-with-mixitup/">Filtering with MixItUp</a></p>
+<h4 class="small-heading">Sort Controls</h4>
+<p>Sort controls are queried based on the presence of a <code>data-sort</code> attribute, whose value takes the form of a "sort string" made up of the name of the attribute to sort by, followed by an optional colon-separated  order component e.g. <code>'order'</code>, <code>'order:asc'</code>, <code>'order:desc'</code>.</p>
+<figure class="figure">
+
+<pre data-behavior="syntax9A9516" class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-sort</span>=<span class="hljs-string">"order:asc"</span>&gt;</span>Ascending<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-sort</span>=<span class="hljs-string">"order:descending"</span>&gt;</span>Descending<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-sort</span>=<span class="hljs-string">"random"</span>&gt;</span>Random<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre>
+</figure>
+<p>The values <code>'default'</code> and <code>'random'</code> are also valid, with <code>'default'</code> referring to the original order of target elements in the DOM at the time of mixer instantiation.</p>
+<p>Further reading: <a href="https://www.kunkalabs.com/tutorials/sorting-with-mixitup/">Sorting with MixItUp</a></p>
+<h2 class="medium-fat-heading">Styling the Container</h2>
+<p>While MixItUp can be added on top of any existing CSS layout, we strongly recommend inline-block or flexbox-based styling over floats and legacy grid frameworks when dealing with grid-based designs for a number of reasons.</p>
+<p>Further reading: <a href="https://www.kunkalabs.com/tutorials/mixitup-grid-layouts/">MixItUp Grid Layouts</a></p>
+<h2 class="medium-fat-heading">Loading MixItUp</h2>
+<p>Firstly, load the MixItUp JavaScript library using the preferred method for your project.</p>
+<h4 class="small-heading">Script-tag</h4>
+<p>The most simple way to load MixItUp in your project is to include it via a <code>&lt;script&gt;</code> tag before the closing <code>&lt;/body&gt;</code> tag on your page.</p>
+<figure class="figure">
+
+<pre data-behavior="syntax69BAEA" class="hljs html">...
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/path/to/mixitup.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre>
+</figure>
+<p>With this technique, the MixItUp factory function will be made available via the global variable <code>mixitup</code>.</p>
+<h4 class="small-heading">Module Import</h4>
+<p>If you are building a modular JavaScript project with Webpack, Browserify, or RequireJS, MixItUp can be installed using your package manager of choice (e.g. npm, jspm, yarn) and then imported into any of your project's modules.</p>
+<p><code>npm install mixitup --save-dev</code></p>
+<figure class="figure">
+
+<pre data-behavior="syntax2896DF" class="hljs js"><span class="hljs-comment">// ES2015</span>
+
+<span class="hljs-keyword">import</span> mixitup <span class="hljs-keyword">from</span> <span class="hljs-string">'mixitup'</span>;</pre>
+</figure>
+<figure class="figure">
+
+<pre data-behavior="syntaxADB463" class="hljs js"><span class="hljs-comment">// CommonJS</span>
+
+<span class="hljs-keyword">var</span> mixitup = <span class="hljs-built_in">require</span>(<span class="hljs-string">'mixitup'</span>);</pre>
+</figure>
+<figure class="figure">
+
+<pre data-behavior="syntax1FCD2B" class="hljs js"><span class="hljs-comment">// AMD</span>
+
+<span class="hljs-built_in">require</span>([<span class="hljs-string">'mixitup'</span>], <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">mixitup</span>) </span>{
+
+});</pre>
+</figure>
+<h2 class="medium-fat-heading">Creating a Mixer</h2>
+<p>With the <code>mixitup()</code> factory function available, you may now instantiate a "mixer" on your container to enable MixItUp functionality.</p>
+<p>Call the factory function passing a selector string or a reference to your container element as the first parameter, and a the newly instantiated mixer will be returned.</p>
+<figure class="figure">
+        <figcaption class="figure_caption">
+            <p><strong>Example: Instantiating a mixer with a selector string</strong></p>
+        </figcaption>
+
+<pre data-behavior="syntaxFBF4E2" class="hljs js"><span class="hljs-keyword">var</span> mixer = mixitup(<span class="hljs-string">'.container'</span>);</pre>
+</figure>
+<figure class="figure">
+        <figcaption class="figure_caption">
+            <p><strong>Example: Instantiating a mixer with an element reference</strong></p>
+        </figcaption>
+
+<pre data-behavior="syntaxC16CE0" class="hljs js"><span class="hljs-keyword">var</span> mixer = mixitup(containerEl);</pre>
+</figure>
+<p>Your mixer is now ready for you to interact with, either via its controls (see above), or its API (see <a href="https://www.kunkalabs.com/mixitup/docs/api-methods/">Mixer API Methods</a>). Click a control or call an API method to check that everything is working correctly.</p>
+<h2 class="medium-fat-heading">Configuration</h2>
+<p>If you wish to customize the functionality of your mixer, an optional "configuration object" can be passed as the second parameter to the <code>mixitup</code> function. If no configuration object is passed, the default settings will be used.</p>
+<p>Further reading: <a href="https://www.kunkalabs.com/mixitup/docs/configuration-object/">Configuration Object</a></p>
+<figure class="figure">
+        <figcaption class="figure_caption">
+            <p><strong>Example: Passing a configuration object</strong></p>
+        </figcaption>
+
+<pre data-behavior="syntax151782" class="hljs js"><span class="hljs-keyword">var</span> mixer = mixitup(containerEl, {
+    selectors: {
+        target: <span class="hljs-string">'.blog-item'</span>
+    },
+    animation: {
+        duration: <span class="hljs-number">300</span>
+    }
+});</pre>
+</figure>
+<h4 class="small-heading">Using the API</h4>
+<p>If you wish to interact with your mixer via its API, the mixer reference returned by the factory function can be used to call API methods.</p>
+<figure class="figure">
+        <figcaption class="figure_caption">
+            <p><strong>Example: Calling an API method</strong></p>
+        </figcaption>
+
+<pre data-behavior="syntax53E5F5" class="hljs js"><span class="hljs-keyword">var</span> mixer = mixitup(containerEl);
+
+mixer.filter(<span class="hljs-string">'.category-a'</span>);</pre>
+</figure>
+<p>Further reading: <a href="https://www.kunkalabs.com/mixitup/docs/api-methods/">Mixer API Methods</a></p>
+<h4 class="small-heading">Building a modern JavaScript application?</h4>
+<p>You may wish to use MixItUp 3's new "dataset" API. Dataset is designed for use in API-driven JavaScript applications, and can be used instead of DOM-based methods such as <code>.filter()</code>, <code>.sort()</code>, <code>.insert()</code>, etc. When used, insertion, removal, sorting and pagination can be achieved purely via changes to your data model, without the uglyness of having to interact with or query the DOM directly.</p>
+<p>Further reading: <a href="https://www.kunkalabs.com/tutorials/using-the-dataset-api/">Using the Dataset API</a></p>
+
+    </div>
+
+    <aside class="content-container_sidebar content-container_sidebar__visible content-container_sidebar__mint">
+        <div class="content-container_affixable content-container_affixable__full-height __affixed" data-behavior="affixDA9485" style="">
+                <section class="box box__background-dark box__align-left  box__align-top" data-module-key="layout[0].data.modules[0].data.modules[1].data.modules[2].data.sidebarContent[0]">
+        <div class="wrapper box_text">
+                <a href="https://www.kunkalabs.com/mixitup/migration-guide/" class="box_content">
+                    <h4 class="small-uppercase-heading">Upgrading to MixItUp 3?</h4>
+
+                    <p>If you're currently using MixItUp 2, check out our MixItUp 3 migration guide for a smooth transition.</p>
+                </a>
+
+                <a href="https://www.kunkalabs.com/mixitup/migration-guide/" class="box_link secondary-link"><span>MixItUp 3 Migration Guide</span> <i class="svg-icon svg-icon__arrow-right">
+    <svg viewBox="0 0 100 100">
+        <polyline fill="none" stroke-width="6" stroke-miterlimit="10" points="31.328,87.344 68.672,50 31.328,12.656"></polyline>
+    </svg>
+</i></a>
+        </div>
+</section>
+<section class="news-feed" data-module-key="layout[0].data.modules[0].data.modules[1].data.modules[2].data.sidebarContent[1]">
+    <div class="wrapper news-feed_text">
+            <h4 class="small-uppercase-heading">Latest Tutorials</h4>
+
+        <div class="news-feed_articles">
+                <a href="https://www.kunkalabs.com/tutorials/integrating-mixitup-into-your-project/" class="article-link">
+    <h2 class="medium-fat-heading">Integrating MixItUp into Your Project</h2>
+
+    <time class="time">12th February 2017</time>
+</a>
+<a href="https://www.kunkalabs.com/tutorials/filtering-and-sorting-on-load/" class="article-link">
+    <h2 class="medium-fat-heading">Filtering and Sorting on Load</h2>
+
+    <time class="time">27th January 2017</time>
+</a>
+<a href="https://www.kunkalabs.com/tutorials/using-the-dataset-api/" class="article-link">
+    <h2 class="medium-fat-heading">Using the Dataset API</h2>
+
+    <time class="time">8th December 2016</time>
+</a>
+<a href="https://www.kunkalabs.com/tutorials/sorting-with-mixitup/" class="article-link">
+    <h2 class="medium-fat-heading">Sorting with MixItUp</h2>
+
+    <time class="time">6th December 2016</time>
+</a>
+        </div>
+
+            <a href="https://www.kunkalabs.com/tutorials/" class="secondary-link"><span>All tutorials</span> <i class="svg-icon svg-icon__arrow-right">
+    <svg viewBox="0 0 100 100">
+        <polyline fill="none" stroke-width="6" stroke-miterlimit="10" points="31.328,87.344 68.672,50 31.328,12.656"></polyline>
+    </svg>
+</i></a>
+    </div>
+</section>
+        </div>
+    </aside>
+</section>
+</main>
+<footer class="global-footer wrapper" data-module-key="layout[0].data.modules[0].data.modules[2]">
+    <nav class="global-footer_nav-primary" data-behavior="subscribe221956" data-events="[&quot;navigate&quot;]">
+            <a href="https://www.kunkalabs.com/contact-us/" class="nav-link" data-ref="nav-link">Contact Us</a>
+
+
+
+            <a href="https://www.kunkalabs.com/terms-and-conditions/" class="nav-link" data-ref="nav-link">Terms &amp; Conditions</a>
+
+
+
+            <a href="https://www.kunkalabs.com/blog/" class="nav-link" data-ref="nav-link">Blog</a>
+
+
+    </nav>
+
+    <i class="global-footer_vertical-aligner"></i>
+
+    <span class="global-footer_nav-secondary">
+        <div class="global-footer_social-icons">
+            <a href="https://twitter.com/patrickkunka/" target="_blank" class="social-icon">
+                <i class="svg-icon svg-icon__twitter">
+    <svg viewBox="0 0 100 100">
+        <path d="M91.889,24.018c-3.081,1.367-6.396,2.291-9.873,2.707c3.547-2.128,6.273-5.495,7.558-9.509
+            c-3.322,1.969-7.001,3.401-10.914,4.17c-3.136-3.341-7.603-5.427-12.546-5.427c-9.493,0-17.187,7.694-17.187,17.187
+            c0,1.348,0.152,2.66,0.445,3.917c-14.284-0.717-26.95-7.561-35.427-17.96c-1.479,2.539-2.327,5.49-2.327,8.642
+            c0,5.964,3.034,11.223,7.647,14.307c-2.817-0.089-5.466-0.861-7.786-2.149c-0.003,0.071-0.003,0.144-0.003,0.217
+            c0,8.328,5.925,15.273,13.786,16.852c-1.443,0.393-2.961,0.602-4.529,0.602c-1.107,0-2.183-0.107-3.233-0.309
+            c2.186,6.828,8.535,11.797,16.056,11.936c-5.883,4.61-13.294,7.357-21.347,7.357c-1.388,0-2.754-0.081-4.1-0.241
+            c7.605,4.877,16.64,7.723,26.348,7.723c31.615,0,48.902-26.191,48.902-48.904c0-0.746-0.016-1.487-0.05-2.223
+            c3.359-2.424,6.273-5.451,8.577-8.896H91.889z"></path>
+    </svg>
+</i>
+            </a>
+
+            <a href="https://www.linkedin.com/company/kunkalabs" target="_blank" class="social-icon">
+                <i class="svg-icon svg-icon__linkedin">
+    <svg viewBox="0 0 100 100">
+        <path d="M33.169,19.991c0,3.634-2.684,6.578-7.097,6.578c-4.153,0-6.837-2.944-6.837-6.578
+            c0-3.719,2.772-6.578,7.012-6.578C30.484,13.412,33.081,16.272,33.169,19.991z M19.581,74.084V31.762h13.153v42.322
+            C32.737,74.084,19.581,74.084,19.581,74.084z M40.609,45.263c0-5.278-0.175-9.691-0.35-13.5h11.425l0.609,5.887h0.259
+            c1.731-2.772,5.972-6.837,13.069-6.837c8.653,0,15.144,5.797,15.144,18.262v25.013H67.613V50.634c0-5.453-1.906-9.175-6.666-9.175
+            c-3.634,0-5.794,2.509-6.747,4.934c-0.35,0.866-0.434,2.075-0.434,3.288v24.406H40.613C40.609,74.088,40.609,45.263,40.609,45.263z"></path>
+    </svg>
+</i>
+            </a>
+
+            <a href="https://github.com/patrickkunka" target="_blank" class="social-icon">
+                <i class="svg-icon svg-icon__github">
+    <svg viewBox="0 0 100 100">
+        <path d="M50,9.295c-23.049,0-41.736,18.685-41.736,41.736c0,18.439,11.96,34.085,28.542,39.602c2.087,0.386,2.854-0.905,2.854-2.009
+    c0-0.994-0.039-4.283-0.057-7.771c-11.613,2.525-14.062-4.925-14.062-4.925c-1.899-4.823-4.633-6.106-4.633-6.106
+    c-3.788-2.59,0.287-2.538,0.287-2.538c4.189,0.295,6.396,4.301,6.396,4.301c3.722,6.38,9.764,4.536,12.145,3.469
+    c0.373-2.697,1.456-4.539,2.65-5.582c-9.271-1.054-19.016-4.635-19.016-20.625c0-4.557,1.63-8.279,4.301-11.203
+    c-0.433-1.051-1.862-5.295,0.404-11.044c0,0,3.506-1.122,11.48,4.278c3.328-0.926,6.899-1.388,10.447-1.406
+    c3.545,0.016,7.119,0.48,10.455,1.406c7.966-5.4,11.464-4.278,11.464-4.278c2.272,5.749,0.843,9.993,0.41,11.044
+    c2.676,2.922,4.296,6.646,4.296,11.203c0,16.029-9.764,19.559-19.058,20.594c1.497,1.296,2.83,3.834,2.83,7.729
+    c0,5.585-0.05,10.079-0.05,11.454c0,1.111,0.751,2.413,2.867,2.003c16.574-5.525,28.519-21.163,28.519-39.597
+    C91.736,27.98,73.049,9.295,50,9.295z"></path>
+    </svg>
+</i>
+            </a>
+        </div>
+
+        <p>© 2022 KunkaLabs Ltd</p>
+    </span>
+</footer>
+</div>
+<div class="utilities" data-module-key="layout[0].data.modules[1]">
+    <div class="loader" data-ref="loader"></div>
+    <div class="rem" data-ref="rem"></div>
+    <div class="card-grid_column-counter" data-ref="column-counter"></div>
+    <div class="global-header_flag-is-mobile-header" data-ref="flag-is-mobile-header"></div>
+
+    <section class="modal" data-module-key="layout[0].data.modules[1].data.modules[0]" data-behavior="modal0B1245 subscribe84D8CC" data-publish="true" data-events="[&quot;modalOpen&quot;, &quot;journeyForward&quot;, &quot;journeyBack&quot;, &quot;journeyReplace&quot;]">
+    
+</section>
+<div class="message" data-behavior="message9FDC82"></div>
+</div>
+
+        <script src="./Get Started – MixItUp Docs _ KunkaLabs_files/saved_resource"></script>
+        <script src="./Get Started – MixItUp Docs _ KunkaLabs_files/saved_resource(1)"></script>
+
+            <script src="./Get Started – MixItUp Docs _ KunkaLabs_files/highlight.js.download"></script>
+        <script src="./Get Started – MixItUp Docs _ KunkaLabs_files/app.js.download"></script>
+    
+<iframe name="stripeXDM_default291382_provider" id="stripeXDM_default291382_provider" aria-hidden="true" src="./Get Started – MixItUp Docs _ KunkaLabs_files/channel.html" frameborder="0" style="position: absolute; top: -2000px; left: 0px;"></iframe><iframe name="__privateStripeMetricsController2730" frameborder="0" allowtransparency="true" scrolling="no" allow="payment *" src="./Get Started – MixItUp Docs _ KunkaLabs_files/m-outer-6262077c14f753400d607dc30e70f1af.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe></body></html>

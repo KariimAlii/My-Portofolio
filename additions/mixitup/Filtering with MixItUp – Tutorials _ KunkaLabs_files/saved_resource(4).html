@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://demos.kunkalabs.com/mixitup/toggle-filtering-and-logic/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="./reset.css" rel="stylesheet">
+        <link href="./style(2).css" rel="stylesheet">
+
+        <title>MixItUp Demo - Toggle Filtering AND Logic</title>
+    </head>
+    <body>
+        <div class="controls">
+            <button type="button" class="control mixitup-control-active" data-filter="all">All</button>
+            <button type="button" class="control" data-toggle=".green">Green</button>
+            <button type="button" class="control" data-toggle=".blue">Blue</button>
+            <button type="button" class="control" data-toggle=".pink">Pink</button>
+        </div>
+
+        <div class="container" id="MixItUp048A75">
+            <div class="mix green blue"></div>
+            <div class="mix green"></div>
+            <div class="mix blue"></div>
+            <div class="mix pink"></div>
+            <div class="mix green pink"></div>
+            <div class="mix blue"></div>
+            <div class="mix pink"></div>
+            <div class="mix blue pink"></div>
+
+            <div class="gap"></div>
+            <div class="gap"></div>
+            <div class="gap"></div>
+        </div>
+
+        <script src="./mixitup.min.js.download"></script>
+
+        <script>
+            var containerEl = document.querySelector('.container');
+
+            var mixer = mixitup(containerEl, {
+                controls: {
+                    toggleLogic: 'and'
+                }
+            });
+        </script>
+    
+</body></html>

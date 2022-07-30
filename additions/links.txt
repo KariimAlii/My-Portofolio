@@ -1,0 +1,5 @@
+https://boxicons.com/usage#import-css
+https://fonts.google.com/specimen/Poppins?query=poppins
+https://www.kunkalabs.com/mixitup/
+https://scrollrevealjs.org/
+https://colors.dopely.top/color-pedia

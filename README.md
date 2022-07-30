@@ -8,6 +8,6 @@
 - Developed first with the Mobile First methodology, then for desktop.
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
-💙 You can view my different projects and contact me through my [Website](https://www.youtube.com/c/Bedimcode)
+💙 You can view my different projects and contact me through my [Website](https://karimali.netlify.app)
 
-![preview img](/preview.png)
+
